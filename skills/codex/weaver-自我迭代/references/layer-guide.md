@@ -8,7 +8,7 @@
 
 | 范围 | 规则文件 | 配置文件 | 适合内容 |
 |---|---|---|---|
-| 全局 | `~/.codex/AGENTS.md` | `~/.codex/config.toml` | 跨项目硬规则、通用 Codex 配置 |
+| 全局 | `~/.Codex/AGENTS.md` | `~/.Codex/config.toml` | 跨项目硬规则、通用 CLI 配置 |
 | 项目 | `<项目根>/AGENTS.md` | `<项目根>/.codex/config.toml` | 项目构建、测试、目录边界、项目配置 |
 | 子目录 | `<子目录>/AGENTS.md` | 通常继承项目配置；仅在 Codex 明确支持且确有必要时另设 | 模块或子项目专属规则 |
 
@@ -38,7 +38,7 @@
 | 必须执行/禁止执行的指令 | `AGENTS.md` |
 | Codex 可识别的配置键 | 对应作用域的 `config.toml` |
 | 稳定偏好、项目决策、当前状态 | 项目已有 memory/docs；没有合适位置时先建议，不随意造体系 |
-| 通用概念、规律、方法论 | 用户现有知识库，遵循其 `AGENTS.md` |
+| 通用概念、规律、方法论 | `个人知识库/wiki/`，遵循其 `AGENTS.md` |
 | 已验证错误、修复与证据 | 项目 `.codex/ERROR_LOG.md` |
 | 技能程序性说明 | `~/.agents/skills` 或项目 `.agents/skills` |
 
@@ -57,6 +57,6 @@
 
 - 个人技能：`~/.agents/skills/<skill-name>/SKILL.md`
 - 项目技能：`<项目>/.agents/skills/<skill-name>/SKILL.md`
-- 显式调用：`$skill-name`
+- 显式调用：通过当前 CLI 的 skill 系统调用
 
 路径不存在时，不因“可能有用”而创建空目录或占位技能。
